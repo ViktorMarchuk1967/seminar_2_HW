@@ -4,3 +4,20 @@
 перевернуть, чтобы все монетки были повернуты вверх одной и той же стороной.
 Выведите минимальное количество монет, которые нужно перевернуть
 """
+
+from random import randint
+n = int(input("Введите количество монет: "))
+lst_coin = []
+coin_0 = 0
+coin_1 = 0
+for i in range(n):
+    lst_coin.append(randint(0, 1))
+    if lst_coin[i] == 0:
+        coin_0 += 1
+    else:
+        coin_1 += 1
+print(lst_coin)
+if coin_0 < coin_1:
+    print(coin_0)
+else:
+    print(coin_1)
