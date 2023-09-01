@@ -3,3 +3,11 @@
 не превосходящие числа N.
 """
 
+k = int(input("Введите число k: "))
+N = int(input("Введите максимальное число N: "))
+for i in range(k):
+    res = 2 ** i
+    if res <= N:
+        print(res)
+    else:
+        break
